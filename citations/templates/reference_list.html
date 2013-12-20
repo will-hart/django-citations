@@ -1,0 +1,10 @@
+{% if references %}
+<hr>
+<h2>Reference List</h2>
+
+<ol>
+{% for ref in references %}
+    <li><a name="#fn_{{ forloop.counter }}"> </a>{% if ref.url %}<a href="{{ ref.url }}">{{ ref }}</a>{% else %}{{ ref }}{% endif %}</li>
+{% endfor %}
+</ol>
+{% endif %}
