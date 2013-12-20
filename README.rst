@@ -55,3 +55,15 @@ template's context.
 A reference list can be included at the bottom of the document::
 
     {% show_references reference_list %}
+    
+Change Log
+----------
+
+**Version 0.2**
+
+ - Improved citation database - more fields available
+ - Improved reference output (uses a Harvard referencing format)
+ 
+**Version 1.0**
+
+Initial version
