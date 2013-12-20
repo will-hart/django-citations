@@ -1,3 +1,4 @@
+from django.contrib.humanize.templatetags.humanize import ordinal
 from django.db import models
 from django.utils.html import escape
 from datetime import datetime
@@ -41,6 +42,9 @@ class Reference(models.Model):
         """
         citation = "{0} ({1}) <i>{2}</i>".format(
             escape(self.author), escape(self.year), escape(self.title))
+
+        if self.edition and self.edition > 1:
+            citation += " " + ordinal(self.edition) + " ed"
 
         if self.publisher:
             citation += ". {0}{1}".format(
