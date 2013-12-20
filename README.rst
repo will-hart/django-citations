@@ -59,10 +59,11 @@ A reference list can be included at the bottom of the document::
 Change Log
 ----------
 
-**Version 0.2**
+**Version 0.2.1**
 
  - Improved citation database - more fields available
  - Improved reference output (uses a Harvard referencing format)
+ - Fix tags in README
  
 **Version 1.0**
 
