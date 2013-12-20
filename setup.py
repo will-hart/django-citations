@@ -11,7 +11,10 @@ setup(
     version='0.2.1',
     packages=['citations'],
     include_package_data=True,
-    license='MIT License',  # example license
+    install_requires=[
+        "pytz",
+    ],
+    license='MIT License',  
     description='A simple Django app to include citations and reference lists in your templates.',
     long_description=README,
     url='http://www.williamhart.info',
