@@ -5,6 +5,9 @@ Django Citations
 Citations is a simple Django app which lets you use a citations and 
 reference lists within your templates. 
 
+The source code is available from https://github.com/will-hart/django-citations
+under an MIT license
+
 Quick start
 -----------
 
