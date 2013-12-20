@@ -37,13 +37,13 @@ your template::
 You can then do the following in your template where you want the reference to
 appear::
 
-    {{ cite "my_reference_slug" }}
+    {% cite "my_reference_slug" %}
     
 You can refer to multiple references at a time by just adding new slugs separated by spaces.
 Note that quotation marks are required around the slugs, and slug names should not contain 
 spaces::
 
-    {{ cite "my_first_reference_slug" "my_second_reference_slug" }}
+    {% cite "my_first_reference_slug" "my_second_reference_slug" %}
     
 If you attempt to reference a work that is not in your reference list a TemplateSyntaxError
 will be raised showing the offending reference slug.  
