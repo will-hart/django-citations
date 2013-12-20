@@ -11,14 +11,18 @@ under an MIT license
 Quick start
 -----------
 
-1. Add "citations" to your INSTALLED_APPS setting like this::
+1. Install using::
+
+    pip install django-citations
+
+2. Add "citations" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = (
         ...
         'citations',
     )
 
-2. Run `python manage.py migrate` to create the polls models.
+3. Run `python manage.py migrate` to create the models.
 
 
 Usage
@@ -67,4 +71,4 @@ Change Log
  
 **Version 1.0**
 
-Initial version
+ - Initial version
