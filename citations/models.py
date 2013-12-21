@@ -20,7 +20,7 @@ class Reference(models.Model):
     title = models.CharField(max_length=512)
     year = models.IntegerField(default=2000)
 
-    series = models.IntegerField(blank=True, null=True)
+    series = models.CharField(max_length=512, blank=True, null=True)
     volume = models.IntegerField(blank=True, null=True)
     edition = models.IntegerField(blank=True, null=True)
 
@@ -31,6 +31,9 @@ class Reference(models.Model):
     place = models.CharField(max_length=128, blank=True, null=True)
 
     abstract = models.TextField(blank=True, null=True)
+    comments = models.TextField(blank=True, null=True)
+    keywords = models.TextField(blank=True, null=True)
+
     accessed = models.DateField(default=datetime.now(pytz.utc))
 
     def __unicode__(self):

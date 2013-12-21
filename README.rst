@@ -60,14 +60,29 @@ A reference list can be included at the bottom of the document::
 
     {% show_references reference_list %}
     
+Importing References
+--------------------
+
+If you have the package `bibtexparser` installed then you will have access in the admin
+panel to an "Upload Bibtex" button.  This feature will upload a bibtex file, scan it for 
+fields that django-citations supports and save new records.
+
+The bibtexparser package is provided under the LGPL.
+
 Change Log
 ----------
 
+**Version 0.3**
+ - Add new fields to database
+ - Add bibtex upload function, where `bibtexparser` is installed
+
 **Version 0.2.1**
+ - Fix tags in README
+
+**Version 0.2**
 
  - Improved citation database - more fields available
  - Improved reference output (uses a Harvard referencing format)
- - Fix tags in README
  
 **Version 1.0**
 

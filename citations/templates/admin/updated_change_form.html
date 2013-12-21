@@ -1,0 +1,13 @@
+{% extends "admin/change_list.html" %}
+{% load i18n admin_urls %}
+{% block object-tools-items %}
+    <li>
+        <a href="{% url opts|admin_urlname:'upload_bibtex' %}" class="historylink">{% trans "Upload Bibtex" %}</a>
+    </li>
+    <li>
+        {% url cl.opts|admin_urlname:'add' as add_url %}
+        <a href="{% add_preserved_filters add_url is_popup %}" class="addlink">
+        {% blocktrans with cl.opts.verbose_name as name %}Add {{ name }}{% endblocktrans %}
+        </a>
+    </li>
+{% endblock %}

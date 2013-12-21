@@ -1,0 +1,20 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls %}
+{% block object-tools %}
+    <h1>BibtexParser Required</h1>
+    <p>
+        To enable bibtex file upload the BibtexParser module is required.
+        This can be installed through PIP:
+    </p>
+
+    <pre>
+        pip install bibtexparser
+    </pre>
+
+    <hr>
+
+    <br>
+    <p>
+        <a href="/admin/citations/reference/">{% trans "Return to reference list" %}</a>
+    </p>
+{% endblock %}

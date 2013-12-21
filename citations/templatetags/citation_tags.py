@@ -62,4 +62,9 @@ def show_references(reference_list):
     return {'references': reference_list}
 
 
+@register.filter
+def startswith(value,arg):
+    return str(value).startswith(str(arg))
+
+
 register.tag('cite', do_cite)
