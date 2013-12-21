@@ -74,6 +74,28 @@ fields that django-citations supports and save new records.
 
 The bibtexparser package is provided under the LGPL.
 
+Supported Fields
+----------------
+
+The fields currently supported by the django-citations database include:
+
+ - type (currently one of book, electronic journal, journal or website)
+ - slug (unique ID for the reference, max 128 characters)
+ - author (max 512 characters)
+ - title (max 512 characters)
+ - year (a number)
+ - series (max 512 characters)
+ - volume (a number)
+ - edition (a number)
+ - isbn (up to 17 characters - can include dashes)
+ - url (the URL where the resource was accessed online)
+ - publisher (max 128 characters)
+ - place (place of publishing, max 128 characters)
+ - abstract (free text)
+ - comments (free text)
+ - keywords (free text)
+ - accessed (the date the resource was first accessed)
+
 Change Log
 ----------
 
