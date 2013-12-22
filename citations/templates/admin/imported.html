@@ -1,0 +1,34 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls citation_tags %}
+{% block object-tools %}
+    {%  if success %}
+        <h1>BibtexParser Import Complete</h1>
+        <h3>
+            {{ records.0 }} record{{ records.0|pluralize }} successfully imported, {{ records.1 }} record import{{ records.1|pluralize }} failed
+        </h3>
+
+        <br><br>
+
+        <hr>
+
+        <ol>
+            {% for r in records.2 %}
+            <li{% if r|startswith:'!' %} style="color:red;"{% else %} style="color:green;"{% endif %}>{{ r }}</li>
+            {% endfor %}
+        </ol>
+    {%  else %}
+        <h1>Upload a bibtex file</h1>
+        <form enctype="multipart/form-data" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Upload" />
+        </form>
+    {%  endif %}
+
+    <hr>
+
+    <br>
+    <p>
+        <a href="/admin/citations/reference/">{% trans "Return to reference list" %}</a>
+    </p>
+{% endblock %}

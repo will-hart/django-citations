@@ -20,7 +20,7 @@ class Reference(models.Model):
     title = models.CharField(max_length=512)
     year = models.IntegerField(default=2000)
 
-    series = models.IntegerField(blank=True, null=True)
+    series = models.CharField(max_length=512, blank=True, null=True)
     volume = models.IntegerField(blank=True, null=True)
     edition = models.IntegerField(blank=True, null=True)
 
@@ -31,29 +31,36 @@ class Reference(models.Model):
     place = models.CharField(max_length=128, blank=True, null=True)
 
     abstract = models.TextField(blank=True, null=True)
+    comments = models.TextField(blank=True, null=True)
+    keywords = models.TextField(blank=True, null=True)
+
     accessed = models.DateField(default=datetime.now(pytz.utc))
 
+    class Meta:
+        ordering = ['author']
+
     def __unicode__(self):
-        return u'[%s]: %s' % (self.slug, self.title)
+        return u'{0}, {1} [{2}]'.format(self.author, self.title, self.slug)
 
     def build_citation(self):
         """
         Formats a specific citation based on the type of reference
         """
-        citation = "{0} ({1}) <i>{2}</i>".format(
+        citation = u"{0} ({1}) <i>{2}</i>".format(
             escape(self.author), escape(self.year), escape(self.title))
 
         if self.edition and self.edition > 1:
-            citation += " " + ordinal(self.edition) + " ed"
+            citation += u" " + ordinal(self.edition) + u" ed"
 
         if self.publisher:
-            citation += ". {0}{1}".format(
+            citation += u". {0}{1}".format(
                 escape(self.publisher), ": " + escape(self.place) if self.place else "")
 
         if self.url:
-            citation += " [Online]. Available from  <a href='{0}'>{0}</a>".format(
+            citation += u" [Online]. Available from  <a href='{0}'>{0}</a>".format(
                 escape(self.url))
 
-        return citation + "."
+        citation += "."
+        return citation.encode('utf-8')
 
     citation = property(build_citation)

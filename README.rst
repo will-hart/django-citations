@@ -5,20 +5,25 @@ Django Citations
 Citations is a simple Django app which lets you use a citations and 
 reference lists within your templates. 
 
-The source code is available from https://github.com/will-hart/django-citations
-under an MIT license
+ - The source code is available from https://github.com/will-hart/django-citations under an MIT license.  
+ - You can find the package on the Python Packing Index https://pypi.python.org/pypi/django-citations/.
+ - The latest documentation for the `develop` branch is available from http://django-citations.readthedocs.org/en/latest/
 
 Quick start
 -----------
 
-1. Add "citations" to your INSTALLED_APPS setting like this::
+1. Install using::
+
+    pip install django-citations
+
+2. Add "citations" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = (
         ...
         'citations',
     )
 
-2. Run `python manage.py migrate` to create the polls models.
+3. Run `python manage.py migrate` to create the models.
 
 
 Usage
@@ -56,15 +61,32 @@ A reference list can be included at the bottom of the document::
 
     {% show_references reference_list %}
     
+Importing References
+--------------------
+
+If you have the package `bibtexparser` installed then you will have access in the admin
+panel to an "Upload Bibtex" button.  This feature will upload a bibtex file, scan it for 
+fields that django-citations supports and save new records.
+
+The bibtexparser package is provided under the LGPL.
+
 Change Log
 ----------
 
+**Version 0.3**
+ - Improved documentation
+ - Add new fields to database
+ - Add bibtex upload function, where `bibtexparser` is installed
+ - Add `show_all_references` tag for complete bibliography
+
 **Version 0.2.1**
+ - Fix tags in README
+
+**Version 0.2**
 
  - Improved citation database - more fields available
  - Improved reference output (uses a Harvard referencing format)
- - Fix tags in README
  
 **Version 1.0**
 
-Initial version
+ - Initial version

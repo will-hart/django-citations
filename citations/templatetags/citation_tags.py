@@ -62,4 +62,15 @@ def show_references(reference_list):
     return {'references': reference_list}
 
 
+@register.inclusion_tag("reference_list.html")
+def show_all_references():
+    refs = R.objects.all()
+    return {'references': refs}
+
+
+@register.filter
+def startswith(value,arg):
+    return str(value).startswith(str(arg))
+
+
 register.tag('cite', do_cite)
