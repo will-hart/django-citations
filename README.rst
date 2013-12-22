@@ -74,8 +74,10 @@ Change Log
 ----------
 
 **Version 0.3**
+ - Improved documentation
  - Add new fields to database
  - Add bibtex upload function, where `bibtexparser` is installed
+ - Add `show_all_references` tag for complete bibliography
 
 **Version 0.2.1**
  - Fix tags in README
