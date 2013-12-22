@@ -4,6 +4,7 @@ from citations.models import Reference
 
 try:
     from bibtexparser.bparser import BibTexParser
+    from bibtexparser.customization import convert_to_unicode
 except ImportError:
     pass
 else:
@@ -13,7 +14,7 @@ else:
         def save(self):
 
             bibfile = self.cleaned_data['file'].file
-            bp = BibTexParser(bibfile)
+            bp = BibTexParser(bibfile, customization=convert_to_unicode)
 
 
             good = 0
