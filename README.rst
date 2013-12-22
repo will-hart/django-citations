@@ -5,12 +5,9 @@ Django Citations
 Citations is a simple Django app which lets you use a citations and 
 reference lists within your templates. 
 
- - The source code is available from https://github.com/will-hart/django-citations
-under an MIT license.  
- - You can find the package on the Python Packing Index 
-https://pypi.python.org/pypi/django-citations/.
- - The latest documentation for the `develop` branch is available from 
-http://django-citations.readthedocs.org/en/latest/
+ - The source code is available from https://github.com/will-hart/django-citations under an MIT license.  
+ - You can find the package on the Python Packing Index https://pypi.python.org/pypi/django-citations/.
+ - The latest documentation for the `develop` branch is available from http://django-citations.readthedocs.org/en/latest/
 
 Quick start
 -----------
@@ -77,8 +74,10 @@ Change Log
 ----------
 
 **Version 0.3**
+ - Improved documentation
  - Add new fields to database
  - Add bibtex upload function, where `bibtexparser` is installed
+ - Add `show_all_references` tag for complete bibliography
 
 **Version 0.2.1**
  - Fix tags in README

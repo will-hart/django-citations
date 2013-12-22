@@ -8,7 +8,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name='django-citations',
-    version='0.2.1',
+    version='0.3',
     packages=['citations'],
     include_package_data=True,
     install_requires=[
