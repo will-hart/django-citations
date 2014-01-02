@@ -7,10 +7,23 @@ cite
 
     {% cite "slugs" ... %}
     
-Use the cite template to cite a reference in the body of the text.  Any number
+Use the cite tag to cite a reference in the body of the text.  Any number
 of reference slugs can be provided as space separated values inside quotation
 marks.  A `reference_list` variable will be added to the template context which
 contains all the works cited in the article to date.
+
+cite_note
+---------
+
+    {% cite_note "slug" "note" ... %}
+
+Use the cite_note tag to cite a reference in the body of the text with some supporting
+notes.  For instance "[1 p20]" would be achieved by using `{% cite_note "slug" "p20" %}.  
+As with the `cite` tag, a series of reference-note pairs can be provided to reference 
+multiple works within a single tag.  A `reference_list` variable will be added to the 
+template context which contains all the works cited in the article to date.
+
+.. note:: To quote multiple works in one reference block (e.g. [1; 2; 3]) you can either provide multiple slugs inside the tag, or use multiple tags with no separating characters or white space.  Django-citations will search for consecutive tags and merge them.
 
 show_references
 ---------------
