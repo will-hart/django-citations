@@ -4,7 +4,7 @@
 
 <ol>
 {% for ref in references %}
-    <li><a id="fn_{{ forloop.counter }}"></a>{{ ref.build_citation | safe }}</li>
+    <li><a id="fnrf_{{ forloop.counter }}"></a>{{ ref.build_citation | safe }}</li>
 {% endfor %}
 </ol>
 {% endif %}

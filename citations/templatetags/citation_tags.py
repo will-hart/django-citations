@@ -1,6 +1,7 @@
 from django import template
 
 from citations.models import Reference as R
+from citations.utilities import dc_alpha_counter
 
 register = template.Library()
 
@@ -44,9 +45,25 @@ class CiteNode(template.Node):
         if not ref_ids:
             return "[?]"
 
-        return "[" + "; ".join(["<a href='#fn_{0}'>{0}</a>{1}".format(
+        return "[" + "; ".join(["<a href='#fnrf_{0}'>{0}</a>{1}".format(
             x, "" if x not in notes.keys() else " {0}".format(notes[x])
         ) for x in ref_ids]) + "]"
+
+
+class NoteNode(template.Node):
+    def __init__(self, note):
+        self.note = note
+
+    def render(self, context):
+        # create a new note list if there aren't any yet
+        if 'note_list' not in context:
+            context['note_list'] = []
+
+        context['note_list'].append(self.note)
+        note_num = len(context['note_list'])
+
+        a = "[<a href='#fnnt_{0}'>Note {0}</a>]".format(dc_alpha_counter(note_num))
+        return a
 
 
 def parse_citation(tag, contents):
@@ -72,7 +89,11 @@ def do_cite(parser, token):
     Turns a {{cite "reference_slug"}} into an in-text reference
     """
 
-    tag_name, add_citations = token.contents.split(None, 1)
+    try:
+        tag_name, add_citations = token.contents.split(None, 1)
+    except ValueError:
+        raise template.TemplateSyntaxError("%r tag requires arguments" % token.contents)
+
     citations = parse_citation(tag_name, add_citations)
 
     if parser.tokens:
@@ -82,16 +103,34 @@ def do_cite(parser, token):
             try:
                 tag_name, add_citations = next_token.contents.split(None, 1)
             except ValueError:
-                raise template.TemplateSyntaxError("%r tag requires arguments" % next_token.contents.split()[0])
+                raise template.TemplateSyntaxError("%r tag requires arguments" % next_token.contents)
 
             citations += parse_citation(tag_name, add_citations)
 
     return CiteNode(citations)
 
 
+def do_note(parser, token):
+    """
+    Writes a note - e.g. [a] with notes added to a "note_list"
+    """
+
+    try:
+        tag_name, note = token.contents.split(None, 1)
+    except ValueError:
+        raise template.TemplateSyntaxError("%r tag requires arguments" % token.contents)
+
+    return NoteNode(note)
+
+
 @register.inclusion_tag("reference_list.html")
 def show_references(reference_list):
     return {'references': reference_list}
+
+
+@register.inclusion_tag("note_list.html")
+def show_notes(note_list):
+    return {'notes': note_list}
 
 
 @register.inclusion_tag("reference_list.html")
@@ -101,9 +140,15 @@ def show_all_references():
 
 
 @register.filter
-def startswith(value,arg):
+def startswith(value, arg):
     return str(value).startswith(str(arg))
+
+
+@register.filter
+def alpha_counter(value):
+    return dc_alpha_counter(value)
 
 
 register.tag('cite', do_cite)
 register.tag('cite_note', do_cite)
+register.tag('note', do_note)
