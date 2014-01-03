@@ -25,6 +25,22 @@ template context which contains all the works cited in the article to date.
 
 .. note:: To quote multiple works in one reference block (e.g. [1; 2; 3]) you can either provide multiple slugs inside the tag, or use multiple tags with no separating characters or white space.  Django-citations will search for consecutive tags and merge them.
 
+note
+----
+
+    {% note "This is a note" %}
+    
+Adds an in text note, marked as, for instance marked in text as  "[Note a]", and populates
+a `note_list` variable in the current context.  Use the `show_notes` tag to display the 
+note list.  Make sure the note is within quotation marks.
+
+show_notes
+----------
+
+    {% show_notes list_of_notes %}
+
+Displays a list of all the note strings passed in the `list_of_notes` variable.
+
 show_references
 ---------------
 
