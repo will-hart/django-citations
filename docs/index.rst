@@ -44,14 +44,20 @@ The fields currently supported by the django-citations database include:
 Change Log
 ----------
 
+**Version 0.4**
+ - FIX: HTML anchors for citations
+ - ADD: `cite_note` tag
+ - ADD: `note` and `show_notes` tags
+ - ADD: Consecutive cite tags are merged in templates
+
 **Version 0.3**
  - Improved documentation
- - Add new fields to database
- - Add bibtex upload function, where `bibtexparser` is installed
- - Add `show_all_references` tag for complete bibliography
+ - ADD: new fields to database
+ - ADD: bibtex upload function, where `bibtexparser` is installed
+ - ADD: `show_all_references` tag for complete bibliography
 
 **Version 0.2.1**
- - Fix tags in README
+ - FIX tags in README
 
 **Version 0.2**
 
