@@ -1,14 +1,15 @@
 from django.contrib.humanize.templatetags.humanize import ordinal
 from django.db import models
 from django.utils.html import escape
+from django.utils.translation import ugettext as _
 from datetime import datetime
 import pytz
 
 REFERENCE_TYPE_CHOICES = (
-    ('BK', 'Book'),
-    ('EJL', 'Electronic Journal'),
-    ('JL', 'Journal'),
-    ('WB', 'Website'),
+    ('BK', _('Book')),
+    ('EJL', _('Electronic Journal')),
+    ('JL', _('Journal')),
+    ('WB', _('Website')),
 )
 
 
@@ -37,6 +38,8 @@ class Reference(models.Model):
     accessed = models.DateField(default=datetime.now(pytz.utc))
 
     class Meta:
+        verbose_name = _('Reference')
+        verbose_name_plural = _('References')
         ordering = ['author']
 
     def __unicode__(self):
@@ -57,7 +60,7 @@ class Reference(models.Model):
                 escape(self.publisher), ": " + escape(self.place) if self.place else "")
 
         if self.url:
-            citation += u" [Online]. Available from  <a href='{0}'>{0}</a>".format(
+            citation += _(u" [Online]. Available from  <a href='{0}'>{0}</a>").format(
                 escape(self.url))
 
         citation += "."

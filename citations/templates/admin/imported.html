@@ -2,9 +2,11 @@
 {% load i18n admin_urls citation_tags %}
 {% block object-tools %}
     {%  if success %}
-        <h1>BibtexParser Import Complete</h1>
+        <h1>{% trans "BibtexParser Import Complete" %}</h1>
         <h3>
+          {% blocktrans %}
             {{ records.0 }} record{{ records.0|pluralize }} successfully imported, {{ records.1 }} record import{{ records.1|pluralize }} failed
+          {% endblocktrans %}
         </h3>
 
         <br><br>
@@ -17,7 +19,7 @@
             {% endfor %}
         </ol>
     {%  else %}
-        <h1>Upload a bibtex file</h1>
+        <h1>{% trans "Upload a bibtex file" %}</h1>
         <form enctype="multipart/form-data" method="post">
             {% csrf_token %}
             {{ form.as_p }}

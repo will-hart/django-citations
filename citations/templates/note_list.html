@@ -1,10 +1,10 @@
 {% load citation_tags %}
 {% if notes %}
 <hr>
-<h2>Notes</h2>
+<h2>{% trans "Notes" %}</h2>
 
 {% for note in notes %}
-<strong>Note {{ forloop.counter|alpha_counter }}</strong>
+<strong>{% trans "Note" %} {{ forloop.counter|alpha_counter }}</strong>
 <a id="fnnt_{{ forloop.counter|alpha_counter }}"> </a>
 {{ note }}
 <br>
