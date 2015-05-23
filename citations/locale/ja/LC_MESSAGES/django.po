@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-05-23 12:13+0900\n"
+"POT-Creation-Date: 2015-05-23 12:42+0900\n"
 "PO-Revision-Date: 2015-05-23 12:13+0900\n"
 "Last-Translator: Yasushi Masuda <whosaysni@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
@@ -33,6 +33,70 @@ msgstr "ジャーナル"
 #: models.py:12
 msgid "Website"
 msgstr "ウェブサイト"
+
+#: models.py:17
+msgid "Type"
+msgstr ""
+
+#: models.py:18
+msgid "Slug"
+msgstr ""
+
+#: models.py:20
+msgid "Author"
+msgstr ""
+
+#: models.py:21
+msgid "Title"
+msgstr ""
+
+#: models.py:22
+msgid "Year"
+msgstr ""
+
+#: models.py:24
+msgid "Series"
+msgstr ""
+
+#: models.py:25
+msgid "Volume"
+msgstr ""
+
+#: models.py:26
+msgid "Edition"
+msgstr ""
+
+#: models.py:28
+msgid "ISBN"
+msgstr ""
+
+#: models.py:29
+msgid "URL"
+msgstr ""
+
+#: models.py:31
+msgid "Publisher"
+msgstr ""
+
+#: models.py:32
+msgid "Place"
+msgstr ""
+
+#: models.py:34
+msgid "Abstract"
+msgstr ""
+
+#: models.py:35
+msgid "Comments"
+msgstr ""
+
+#: models.py:36
+msgid "Keywords"
+msgstr ""
+
+#: models.py:38
+msgid "Accessed"
+msgstr ""
 
 #: models.py:41
 msgid "Reference"
@@ -60,8 +124,8 @@ msgid ""
 "          "
 msgstr ""
 "\n"
-"            レコードを%(records.0)s 件%(records.0|pluralize)s インポートしました。"
-" %(records.1)s 件%(records.1|pluralize)sはインポートに失敗しました\n"
+"            レコードを%(records.0)s 件%(records.0|pluralize)s インポートしま"
+"した。 %(records.1)s 件%(records.1|pluralize)sはインポートに失敗しました\n"
 "          "
 
 #: templates/admin/imported.html:22
@@ -85,7 +149,8 @@ msgid ""
 "      "
 msgstr ""
 "\n"
-"        BibTeX ファイルアップロード機能を使うには BibtexParser モジュールが必要です。\n"
+"        BibTeX ファイルアップロード機能を使うには BibtexParser モジュールが必"
+"要です。\n"
 "        PIP でインストールしてください:\n"
 "      "
 
