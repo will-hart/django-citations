@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-23 12:13+0900\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2015-05-23 12:13+0900\n"
+"Last-Translator: Yasushi Masuda <whosaysni@gmail.com>\n"
+"Language-Team: Japanese <ja@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,36 +20,36 @@ msgstr ""
 
 #: models.py:9
 msgid "Book"
-msgstr ""
+msgstr "書籍"
 
 #: models.py:10
 msgid "Electronic Journal"
-msgstr ""
+msgstr "電子ジャーナル"
 
 #: models.py:11
 msgid "Journal"
-msgstr ""
+msgstr "ジャーナル"
 
 #: models.py:12
 msgid "Website"
-msgstr ""
+msgstr "ウェブサイト"
 
 #: models.py:41
 msgid "Reference"
-msgstr ""
+msgstr "リファレンス"
 
 #: models.py:42
 msgid "References"
-msgstr ""
+msgstr "リファレンス"
 
 #: models.py:63
 #, python-brace-format
 msgid " [Online]. Available from  <a href='{0}'>{0}</a>"
-msgstr ""
+msgstr "[オンライン版]。 <a href='{0}'>{0}</a>から入手可能"
 
 #: templates/admin/imported.html:5
 msgid "BibtexParser Import Complete"
-msgstr ""
+msgstr "BibtexParser インポートを完了"
 
 #: templates/admin/imported.html:7
 #, python-format
@@ -59,19 +59,23 @@ msgid ""
 "imported, %(records.1)s record import%(records.1|pluralize)s failed\n"
 "          "
 msgstr ""
+"\n"
+"            レコードを%(records.0)s 件%(records.0|pluralize)s インポートしました。"
+" %(records.1)s 件%(records.1|pluralize)sはインポートに失敗しました\n"
+"          "
 
 #: templates/admin/imported.html:22
 msgid "Upload a bibtex file"
-msgstr ""
+msgstr "BibTeXファイルをアップロード"
 
 #: templates/admin/imported.html:34
 #: templates/admin/unable_to_upload_bibtex.html:20
 msgid "Return to reference list"
-msgstr ""
+msgstr "リファレンス一覧に戻る"
 
 #: templates/admin/unable_to_upload_bibtex.html:4
 msgid "BibtexParser Required"
-msgstr ""
+msgstr "BibtexParser モジュールが必要です"
 
 #: templates/admin/unable_to_upload_bibtex.html:6
 msgid ""
@@ -80,29 +84,33 @@ msgid ""
 "        This can be installed through PIP:\n"
 "      "
 msgstr ""
+"\n"
+"        BibTeX ファイルアップロード機能を使うには BibtexParser モジュールが必要です。\n"
+"        PIP でインストールしてください:\n"
+"      "
 
 #: templates/admin/updated_change_form.html:5
 msgid "Upload Bibtex"
-msgstr ""
+msgstr "BibTeX のアップロード"
 
 #: templates/admin/updated_change_form.html:10
 #, python-format
 msgid "Add %(name)s"
-msgstr ""
+msgstr "%(name)s を追加"
 
 #: templates/note_list.html:4
 msgid "Notes"
-msgstr ""
+msgstr "備考"
 
 #: templates/note_list.html:7
 msgid "Note"
-msgstr ""
+msgstr "備考"
 
 #: templates/reference_list.html:3
 msgid "Reference List"
-msgstr ""
+msgstr "リファレンス一覧"
 
 #: templatetags/citation_tags.py:66
 #, python-brace-format
 msgid "[<a href='#fnnt_{0}'>Note {0}</a>]"
-msgstr ""
+msgstr "[<a href='#fnnt_{0}'>備考 {0}</a>]"
