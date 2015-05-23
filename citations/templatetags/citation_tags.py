@@ -1,5 +1,5 @@
 from django import template
-from django.utils.translation umport ugettext as _
+from django.utils.translation import ugettext as _
 
 from citations.models import Reference as R
 from citations.utilities import dc_alpha_counter
