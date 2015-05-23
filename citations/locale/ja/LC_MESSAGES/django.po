@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-05-23 12:42+0900\n"
-"PO-Revision-Date: 2015-05-23 12:13+0900\n"
+"PO-Revision-Date: 2015-05-23 12:50+0900\n"
 "Last-Translator: Yasushi Masuda <whosaysni@gmail.com>\n"
 "Language-Team: Japanese <ja@li.org>\n"
 "Language: \n"
@@ -36,35 +36,35 @@ msgstr "ウェブサイト"
 
 #: models.py:17
 msgid "Type"
-msgstr ""
+msgstr "種類"
 
 #: models.py:18
 msgid "Slug"
-msgstr ""
+msgstr "スラッグ"
 
 #: models.py:20
 msgid "Author"
-msgstr ""
+msgstr "著者"
 
 #: models.py:21
 msgid "Title"
-msgstr ""
+msgstr "タイトル"
 
 #: models.py:22
 msgid "Year"
-msgstr ""
+msgstr "発行年"
 
 #: models.py:24
 msgid "Series"
-msgstr ""
+msgstr "シリーズ"
 
 #: models.py:25
 msgid "Volume"
-msgstr ""
+msgstr "巻"
 
 #: models.py:26
 msgid "Edition"
-msgstr ""
+msgstr "版数"
 
 #: models.py:28
 msgid "ISBN"
@@ -76,27 +76,27 @@ msgstr ""
 
 #: models.py:31
 msgid "Publisher"
-msgstr ""
+msgstr "出版社"
 
 #: models.py:32
 msgid "Place"
-msgstr ""
+msgstr "開催地等"
 
 #: models.py:34
 msgid "Abstract"
-msgstr ""
+msgstr "概要"
 
 #: models.py:35
 msgid "Comments"
-msgstr ""
+msgstr "コメント"
 
 #: models.py:36
 msgid "Keywords"
-msgstr ""
+msgstr "キーワード"
 
 #: models.py:38
 msgid "Accessed"
-msgstr ""
+msgstr "最終更新"
 
 #: models.py:41
 msgid "Reference"
