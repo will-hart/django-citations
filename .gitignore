@@ -8,3 +8,5 @@ django_citations.egg-info/
 
 docs/_build
 docs/Makefile
+
+django.mo
