@@ -1,4 +1,5 @@
 from django import template
+from django.utils.translation import ugettext as _
 
 from citations.models import Reference as R
 from citations.utilities import dc_alpha_counter
@@ -62,7 +63,7 @@ class NoteNode(template.Node):
         context['note_list'].append(self.note)
         note_num = len(context['note_list'])
 
-        a = "[<a href='#fnnt_{0}'>Note {0}</a>]".format(dc_alpha_counter(note_num))
+        a = _("[<a href='#fnnt_{0}'>Note {0}</a>]").format(dc_alpha_counter(note_num))
         return a
 
 

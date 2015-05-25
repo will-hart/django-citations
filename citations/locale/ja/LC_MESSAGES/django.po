@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-05-23 12:42+0900\n"
+"PO-Revision-Date: 2015-05-23 12:50+0900\n"
+"Last-Translator: Yasushi Masuda <whosaysni@gmail.com>\n"
+"Language-Team: Japanese <ja@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: models.py:9
+msgid "Book"
+msgstr "書籍"
+
+#: models.py:10
+msgid "Electronic Journal"
+msgstr "電子ジャーナル"
+
+#: models.py:11
+msgid "Journal"
+msgstr "ジャーナル"
+
+#: models.py:12
+msgid "Website"
+msgstr "ウェブサイト"
+
+#: models.py:17
+msgid "Type"
+msgstr "種類"
+
+#: models.py:18
+msgid "Slug"
+msgstr "スラッグ"
+
+#: models.py:20
+msgid "Author"
+msgstr "著者"
+
+#: models.py:21
+msgid "Title"
+msgstr "タイトル"
+
+#: models.py:22
+msgid "Year"
+msgstr "発行年"
+
+#: models.py:24
+msgid "Series"
+msgstr "シリーズ"
+
+#: models.py:25
+msgid "Volume"
+msgstr "巻"
+
+#: models.py:26
+msgid "Edition"
+msgstr "版数"
+
+#: models.py:28
+msgid "ISBN"
+msgstr ""
+
+#: models.py:29
+msgid "URL"
+msgstr ""
+
+#: models.py:31
+msgid "Publisher"
+msgstr "出版社"
+
+#: models.py:32
+msgid "Place"
+msgstr "開催地等"
+
+#: models.py:34
+msgid "Abstract"
+msgstr "概要"
+
+#: models.py:35
+msgid "Comments"
+msgstr "コメント"
+
+#: models.py:36
+msgid "Keywords"
+msgstr "キーワード"
+
+#: models.py:38
+msgid "Accessed"
+msgstr "最終更新"
+
+#: models.py:41
+msgid "Reference"
+msgstr "リファレンス"
+
+#: models.py:42
+msgid "References"
+msgstr "リファレンス"
+
+#: models.py:63
+#, python-brace-format
+msgid " [Online]. Available from  <a href='{0}'>{0}</a>"
+msgstr "[オンライン版]。 <a href='{0}'>{0}</a>から入手可能"
+
+#: templates/admin/imported.html:5
+msgid "BibtexParser Import Complete"
+msgstr "BibtexParser インポートを完了"
+
+#: templates/admin/imported.html:7
+#, python-format
+msgid ""
+"\n"
+"            %(records.0)s record%(records.0|pluralize)s successfully "
+"imported, %(records.1)s record import%(records.1|pluralize)s failed\n"
+"          "
+msgstr ""
+"\n"
+"            レコードを%(records.0)s 件%(records.0|pluralize)s インポートしま"
+"した。 %(records.1)s 件%(records.1|pluralize)sはインポートに失敗しました\n"
+"          "
+
+#: templates/admin/imported.html:22
+msgid "Upload a bibtex file"
+msgstr "BibTeXファイルをアップロード"
+
+#: templates/admin/imported.html:34
+#: templates/admin/unable_to_upload_bibtex.html:20
+msgid "Return to reference list"
+msgstr "リファレンス一覧に戻る"
+
+#: templates/admin/unable_to_upload_bibtex.html:4
+msgid "BibtexParser Required"
+msgstr "BibtexParser モジュールが必要です"
+
+#: templates/admin/unable_to_upload_bibtex.html:6
+msgid ""
+"\n"
+"        To enable bibtex file upload the BibtexParser module is required.\n"
+"        This can be installed through PIP:\n"
+"      "
+msgstr ""
+"\n"
+"        BibTeX ファイルアップロード機能を使うには BibtexParser モジュールが必"
+"要です。\n"
+"        PIP でインストールしてください:\n"
+"      "
+
+#: templates/admin/updated_change_form.html:5
+msgid "Upload Bibtex"
+msgstr "BibTeX のアップロード"
+
+#: templates/admin/updated_change_form.html:10
+#, python-format
+msgid "Add %(name)s"
+msgstr "%(name)s を追加"
+
+#: templates/note_list.html:4
+msgid "Notes"
+msgstr "備考"
+
+#: templates/note_list.html:7
+msgid "Note"
+msgstr "備考"
+
+#: templates/reference_list.html:3
+msgid "Reference List"
+msgstr "リファレンス一覧"
+
+#: templatetags/citation_tags.py:66
+#, python-brace-format
+msgid "[<a href='#fnnt_{0}'>Note {0}</a>]"
+msgstr "[<a href='#fnnt_{0}'>備考 {0}</a>]"
